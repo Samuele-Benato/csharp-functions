@@ -1,10 +1,39 @@
-﻿namespace csharp_functions
+﻿using System.Xml.Linq;
+
+namespace csharp_functions
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+
+            /*
+            1. void StampaArray(int[] array)
+            stampa a video il contenuto dell’array in questa forma 
+            “[elemento 1, elemento 2, elemento 3, ...]”.
+            */
+
+            Console.WriteLine("-----INIZIO PRIMA FUNCTION-----");
+
+            void StampaArray(string[] array)
+            {
+                Console.Write("[");
+                for (int i = 0; i < array.Length; i++)
+                {
+                    Console.Write(array[i]);
+                    if (i < array.Length - 1)
+                        Console.Write(", ");
+                }
+                Console.Write("]");
+            }
+
+            string[] elements = { "elemento 1", "elemento 2", "elemento 3" };
+            StampaArray(elements);
+
+            Console.WriteLine("");
+            Console.WriteLine("-----FINE PRIMA FUNCTION-----");
+
+            
         }
     }
 }
