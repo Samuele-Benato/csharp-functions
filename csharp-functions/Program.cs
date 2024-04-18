@@ -235,6 +235,15 @@ namespace csharp_functions
             Console.WriteLine("------------------------------------------------------------");
             Console.WriteLine("");
 
+            //quarta funzione
+
+            int sumUserArray2 = SumArrayElements(numbers);
+            Console.WriteLine($"La somma di tutti gli elementi dell'array è {sumUserArray2}");
+
+            Console.WriteLine("");
+            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine("");
+
             //seconda funzione
 
             Console.WriteLine("Inserisci un numero:");
