@@ -1,4 +1,5 @@
 ﻿using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace csharp_functions
 {
@@ -182,6 +183,29 @@ namespace csharp_functions
 
             Console.WriteLine("");
             Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine("");
+
+            // BONUS //
+
+            Console.WriteLine("Quanti numeri vuoi inserire?");
+            int length = Convert.ToInt32(Console.ReadLine());
+
+            int[] numbers = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                Console.WriteLine($"Inserisci il numero {i + 1}:");
+                numbers[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            string[] stringNumbers = new string[length];
+            for (int i = 0; i < length; i++)
+            {
+                stringNumbers[i] = numbers[i].ToString();
+            }
+
+            Console.WriteLine("L'array inserito è:");
+            PrintArray(stringNumbers);
+
         }
     }
 }
