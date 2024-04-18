@@ -33,7 +33,25 @@ namespace csharp_functions
             Console.WriteLine("");
             Console.WriteLine("-----FINE PRIMA FUNCTION-----");
 
-            
+           /*
+           2. int Quadrato(int numero)
+           che restituisca il quadrato del numero passato come parametro.
+           */
+
+            Console.WriteLine("-----INIZIO SECONDA FUNCTION-----");
+
+            int Square(int number)
+            {
+                int square = number * number;
+                return square;
+            }
+
+            int value = 5;
+            int result = Square(value);
+
+            Console.WriteLine($"Il quadrato di {value} è {result}");
+
+            Console.WriteLine("-----FINE SECONDA FUNCTION-----");
         }
     }
 }
