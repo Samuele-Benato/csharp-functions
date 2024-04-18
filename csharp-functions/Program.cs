@@ -52,6 +52,47 @@ namespace csharp_functions
             Console.WriteLine($"Il quadrato di {value} è {result}");
 
             Console.WriteLine("-----FINE SECONDA FUNCTION-----");
+
+            /*
+            3. int[] ElevaArrayAlQuadrato(int[] array)
+            che preso un array di numeri interi, 
+            restituisca un nuovo array con tutti gli elementi elevati quadrato.
+            */
+
+            Console.WriteLine("-----INIZIO TERZA FUNCTION-----");
+
+            int[] SquareArrayElements(int[] array)
+            {
+                int[] squaredArray = new int[array.Length]; // creo un nuovo array per non modificare l'originale
+
+                for(int i = 0;i < squaredArray.Length; i++)
+                {
+                    squaredArray[i] = array[i] * array[i]; // elevo gli elementi al quadrato
+                }
+
+                return squaredArray;
+            }
+
+            int[] myArray = { 4, 6, 7, 9, 10, 12 };
+            int[] squaredMyArray = SquareArrayElements(myArray);
+
+            // Visualizzo l'array originale
+            Console.Write("L'array originale è: ");
+            foreach (int num in myArray)
+            {
+                Console.Write(num + " ");
+            }
+            Console.WriteLine();
+
+            // Visualizzo l'array al quadrato
+            Console.Write("L'array al quadrato è: ");
+            foreach (int num in squaredMyArray)
+            {
+                Console.Write(num + " ");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("-----FINE TERZA FUNCTION-----");
         }
     }
 }
