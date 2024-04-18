@@ -187,6 +187,8 @@ namespace csharp_functions
 
             // BONUS //
 
+            //Prima funzione
+
             Console.WriteLine("Quanti numeri vuoi inserire?");
             int length = Convert.ToInt32(Console.ReadLine());
 
@@ -206,6 +208,24 @@ namespace csharp_functions
             Console.WriteLine("L'array inserito è:");
             PrintArray(stringNumbers);
 
+            Console.WriteLine("");
+            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine("");
+
+            //seconda funzione
+
+            Console.WriteLine("Inserisci un numero:");
+            int input = Convert.ToInt32(Console.ReadLine());
+
+            int result2 = Square(input);
+
+            Console.WriteLine($"Il quadrato di {input} è {result2}");
+
+            Console.WriteLine("");
+            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine("");
+
+            //terza funzione
         }
     }
 }
