@@ -212,6 +212,29 @@ namespace csharp_functions
             Console.WriteLine("------------------------------------------------------------");
             Console.WriteLine("");
 
+            //terza funzione
+
+            int[] squaredUserArray = SquareArrayElements(numbers);
+
+            // Visualizzo l'array originale
+            Console.Write("L'array originale è: ");
+            foreach (int num in numbers)
+            {
+                Console.Write(num + " ");
+            }
+            Console.WriteLine();
+
+            // Visualizzo l'array al quadrato
+            Console.Write("L'array al quadrato è: ");
+            foreach (int num in squaredUserArray)
+            {
+                Console.Write(num + " ");
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine("");
+
             //seconda funzione
 
             Console.WriteLine("Inserisci un numero:");
@@ -225,7 +248,7 @@ namespace csharp_functions
             Console.WriteLine("------------------------------------------------------------");
             Console.WriteLine("");
 
-            //terza funzione
+           
         }
     }
 }
