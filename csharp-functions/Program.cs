@@ -15,7 +15,7 @@ namespace csharp_functions
 
             Console.WriteLine("-----INIZIO PRIMA FUNCTION-----");
 
-            void StampaArray(string[] array)
+            void PrintArray(string[] array)
             {
                 Console.Write("[");
                 for (int i = 0; i < array.Length; i++)
@@ -28,7 +28,7 @@ namespace csharp_functions
             }
 
             string[] elements = { "elemento 1", "elemento 2", "elemento 3" };
-            StampaArray(elements);
+            PrintArray(elements);
 
             Console.WriteLine("");
             Console.WriteLine("-----FINE PRIMA FUNCTION-----");
@@ -93,6 +93,95 @@ namespace csharp_functions
 
             Console.WriteLine();
             Console.WriteLine("-----FINE TERZA FUNCTION-----");
+
+            /*
+            4. int sommaElementiArray(int[] array)
+            preso un array di numeri interi, 
+            restituisca la somma totale di tutti gli elementi dell’array.
+            */
+
+            Console.WriteLine("-----INIZIO QUARTA FUNCTION-----");
+
+            int SumArrayElements(int[] array)
+            {
+                int sum = 0;
+
+               for(int i = 0; i < array.Length; i++)
+                {
+                    sum += array[i];
+                }
+               return sum;
+            }
+
+            int[] myArray2 = { 4, 6, 7, 9, 10, 12 };
+            int sumMyArray2 = SumArrayElements(myArray2);
+
+            Console.WriteLine($"La somma di tutti gli elementi dell'array è {sumMyArray2}");
+
+            Console.WriteLine("-----FINE QUARTA FUNCTION-----");
+
+            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine("");
+
+            Console.WriteLine("RICHIESTE TRACCIA");
+            int[] slackArray = { 2, 6, 7, 5, 3, 9 };
+
+            Console.WriteLine("");
+            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine("");
+
+            //Stampare l’array di numeri fornito a video
+            Console.Write("Array Slack: ");
+            foreach (int num in slackArray)
+            {
+                Console.Write(num + " ");
+            }
+            Console.WriteLine("");
+            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine("");
+
+            //Stampare l’array di numeri fornito a video,
+            //dove ogni numero è stato prima elevato al quadrato
+            //(Verificare che l’array originale non sia stato modificato quindi
+            //ristampare nuovamente l’array originale e verificare che sia rimasto [2, 6, 7, 5, 3, 9])
+            int[] squaredSlackArray = SquareArrayElements(slackArray);
+
+            // Visualizzo l'array originale
+            Console.Write("L'array originale Slack è: ");
+            foreach (int num in slackArray)
+            {
+                Console.Write(num + " ");
+            }
+            Console.WriteLine();
+
+            // Visualizzo l'array al quadrato
+            Console.Write("L'array al quadrato Slack è: ");
+            foreach (int num in squaredSlackArray)
+            {
+                Console.Write(num + " ");
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine("");
+
+            //Stampare la somma di tutti i numeri
+            int sumSlackArray = SumArrayElements(slackArray);
+            Console.WriteLine($"La somma di tutti gli elementi dell'array Slack è {sumSlackArray}");
+
+            Console.WriteLine("");
+            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine("");
+
+            //Stampare la somma di tutti i numeri elevati al quadrati
+
+            int[] squaredSlackArray2 = SquareArrayElements(slackArray);
+            int sumSlackSquaredArray = SumArrayElements(squaredSlackArray2);
+
+            Console.WriteLine($"La somma di tutti gli elementi dell'array Slack al quadrato è {sumSlackSquaredArray}");
+
+            Console.WriteLine("");
+            Console.WriteLine("------------------------------------------------------------");
         }
     }
 }
